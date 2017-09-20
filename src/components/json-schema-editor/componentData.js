@@ -1,24 +1,28 @@
 import Components from './components'
 
 export var componentData = [
-  new Components.StringComponent('Type string'),
-  new Components.IntegerComponent('Type integer'),
-  new Components.NumberComponent('Type number'),
-  new Components.BooleanComponent('Type boolean'),
-  new Components.ObjectComponent('Type object'),
-  new Components.ArrayComponent('Type array'),
-  new Components.NullComponent('Type null'),
-  new Components.PropertiesComponent('List properties of object'),
-  new Components.RequiredComponent('List required properties of object'),
-  new Components.DependenciesComponent('List dependencies between properties'),
-  new Components.DependencyItemComponent('List of properties which specific property depend on'),
-  new Components.ItemsComponent('List type of each item'),
-  new Components.EnumComponent('List of valid values'),
-  new Components.AllOfComponent('Data must be valid against all of the given subschemas'),
-  new Components.AnyOfComponent('Data must be valid against any of the given subschemas'),
-  new Components.OneOfComponent('Data must be valid against exactly one of the given subschemas'),
-  new Components.NotComponent('Data must not be valid against all of the given subschemas'),
-  new Components.RefComponent('Reference to external schema')
+  new Components.SpliterComponent('---基础数据类型---'),
+  new Components.ObjectComponent('对象'),
+  new Components.StringComponent('字符'),
+  new Components.IntegerComponent('整数'),
+  new Components.NumberComponent('数字'),
+  new Components.BooleanComponent('布尔'),
+  new Components.ArrayComponent('数组'),
+  new Components.NullComponent('空值'),
+  new Components.SpliterComponent('---数据集合---'),
+  new Components.PropertiesComponent('对象属性'),
+  new Components.RequiredComponent('必填属性'),
+  new Components.ItemsComponent('数组列表'), // List type of each item
+  new Components.EnumComponent('枚举集合'), // List of valid values
+  new Components.SpliterComponent('---扩展依赖---'),
+  new Components.DependenciesComponent('依赖关系'), // List dependencies between properties
+  new Components.DependencyItemComponent('依赖项'), // List of properties which specific property depend on
+  new Components.SpliterComponent('---验证条件---'),
+  new Components.AllOfComponent('全部满足'), // Data must be valid against all of the given subschemas
+  new Components.AnyOfComponent('满足任意一个'), // Data must be valid against any of the given subschemas
+  new Components.OneOfComponent('满足任意且一个'), // Data must be valid against exactly one of the given subschemas
+  new Components.NotComponent('不能满足'), // Data must not be valid against all of the given subschemas
+  new Components.RefComponent('外部索引') // Reference to external schema
 ]
 
 export default componentData

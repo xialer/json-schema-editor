@@ -20,7 +20,7 @@
       @drop="drop"
     >
       <img v-if="icon" class="tree__node-icon" :src="icon" :draggable="(node.draggable && !node.editing) ? 'true' : 'false'">
-      <span v-if="node.type">{{node.type}}</span>
+      <span v-if="node.type">{{node.tooltip}}</span>
       <span v-if="node.type" v-show="node.name">: </span>
       <input v-if="node.editing" type="text" v-model="name" @click="nameClicked" @change="changeName" @drop="disableDrop">
       <span v-else="node.editing" v-show="node.name" @click="nameClicked">{{node.name}}</span>

@@ -36,7 +36,7 @@ var selectedNode
 function populateTree (node, parent) {
   let root = new TreeNode(node.type, node.name, node.value, node.valueSchema,
     parent, node.icon, node.funcs, node.editable, node.draggable, node.droppable,
-    node.expended, node.selected)
+    node.expended, node.selected, node.tooltip)
   if (root.selected) selectedNode = root
   if (node.children) {
     root.children = []
@@ -48,9 +48,10 @@ function populateTree (node, parent) {
 }
 
 class TreeNode {
-  constructor (type, name, value, valueSchema, parent, icon, funcs, editable, draggable, droppable, expended, selected) {
+  constructor (type, name, value, valueSchema, parent, icon, funcs, editable, draggable, droppable, expended, selected, tooltip) {
     this.id = generateId()
     this.type = type
+    this.tooltip = tooltip
     this.name = name
     this.valueSchema = valueSchema || { type: 'object' }
     // consider use default of schema when value is null

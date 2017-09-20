@@ -63,6 +63,7 @@
           this.errorMessage = e.message
           return
         }
+        debugger
         // if schema exist then validate with schema
         if (this.itemSchema) {
           let ajv = new Ajv()

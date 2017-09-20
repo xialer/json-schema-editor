@@ -59,3 +59,8 @@ This project requires a valid Firebase configuration to function properly, pleas
 ## To Do List
 - Schema Extension - Add support to custom schema elements.
 - Schema Aware JSON Editor - Extend JSON Schema Editor to schema aware JSON editor.
+
+
+## 补充说明
+
+扩展自Schema-Editor 用户编辑设备范式.仅为测试使用

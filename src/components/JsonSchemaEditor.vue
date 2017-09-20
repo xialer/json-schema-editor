@@ -183,7 +183,13 @@ function cloneNode (source) {
   let node = {}
   if (source) {
     Object.keys(source).forEach(p => {
+      // 从这边了解到不复制提示
+      /*
       if (p !== 'id' && p !== 'tooltip' && p !== 'children' && typeof source[p] !== 'undefined') {
+        node[p] = JSON.parse(JSON.stringify(source[p]))
+      }
+      */
+      if (p !== 'id' && p !== 'children' && typeof source[p] !== 'undefined') {
         node[p] = JSON.parse(JSON.stringify(source[p]))
       }
     })

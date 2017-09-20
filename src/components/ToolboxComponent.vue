@@ -9,7 +9,7 @@
           @dragstart="dragStart"
     >
       <img v-if="icon" class="component-node-icon" :src="icon">
-      <span v-show="showTypeName">{{node.type}}</span>
+      <span v-show="showTypeName">{{node.tooltip}}</span>
       <span v-show="showTypeName && node.name">: </span>
       <span v-show="node.name">{{node.name}}</span>
     </div>
@@ -27,6 +27,7 @@
         return this.$parent.icon(this.node)
       },
       showTypeName () {
+          // 未定义的时候也为 true
         return (typeof this.options.showTypeName === 'undefined') || this.options.showTypeName
       }
     },
@@ -62,7 +63,7 @@
               node: JSON.parse(JSON.stringify(this.node))
             }
             // remove attributes of tool component
-            delete cloneNode.node.tooltip
+            // delete cloneNode.node.tooltip
             delete cloneNode.node.id
             this.options.clipboard.draggedObject = cloneNode
           }

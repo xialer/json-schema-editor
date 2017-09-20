@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <md-toolbar class="md-dense">
-      <h3 class="md-title title" @click="home">Json Schema Editor</h3>
+      <h3 class="md-title title" @click="home">设备范式编辑器</h3>
       <span style="flex: 1;">&nbsp;</span>
       <md-button @click.native="signIn" v-if="!isSignIn">Sign In</md-button>
       <md-button @click.native="signUp" v-if="!isSignIn">Sign Up</md-button>

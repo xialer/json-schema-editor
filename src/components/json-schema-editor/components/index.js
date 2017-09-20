@@ -17,6 +17,7 @@ import PropertiesComponent from './properties'
 import RefComponent from './ref'
 import RequiredComponent from './required'
 import StringComponent from './string'
+import SpliterComponent from './spliter'
 
 export default {
   AllOfComponent,
@@ -37,5 +38,6 @@ export default {
   PropertiesComponent,
   RefComponent,
   RequiredComponent,
-  StringComponent
+  StringComponent,
+  SpliterComponent
 }
